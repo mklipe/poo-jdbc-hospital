@@ -47,7 +47,7 @@ public class EnderecoBancoSQL implements IEnderecoBancoDados{
             stmt.close();
             con.close();
             
-            System.out.println("[INFO] Paciente cadastrado com sucesso!");
+            System.out.println("[INFO] ENDEREÇO cadastrado com sucesso!");
             
         } catch (SQLException e) {
             System.out.println("[ERRO] Ocorreu uma falha ao gravar os dados no banco!");

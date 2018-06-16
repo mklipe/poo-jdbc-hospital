@@ -10,10 +10,31 @@ import negocio.PlanoNegocio;
 public class TesteCadastroPaciente {
     
     public static void main(String[] args) {
+        testeCadastroConsole();
+    }
+    
+    public static void testeCadastro(){
         Endereco endereco = testeCadastrarEndereco();
         Plano plano = testeCadastrarPlano();
         System.out.println("Plano: " + plano.getCodigo());
         testeCadastrarPaciente(endereco, plano);
+    }
+    
+    public static void testeCadastroConsole(){
+        Console console = new Console();
+        Paciente paciente = console.lerNovoPaciente();
+        
+        EnderecoNegocio en = new EnderecoNegocio();
+        en.cadastrar(paciente.getEndereco());
+        
+        PlanoNegocio pn = new PlanoNegocio();
+        pn.cadastrar(paciente.getPlano());
+        
+        PacienteNegocio p = new PacienteNegocio();
+        p.cadastrar(paciente);
+        
+        System.out.println("Cadastrado com sucesso!");
+        
     }
     
     public static void testeCadastrarPaciente (Endereco endereco, Plano plano) {

@@ -7,6 +7,10 @@ public class Paciente extends Pessoa{
     private Plano plano;
     private StatusPaciente status;
     
+    public Paciente(){
+        this.status = StatusPaciente.ATIVO;
+    }
+    
     public Plano getPlano() {
         return plano;
     }

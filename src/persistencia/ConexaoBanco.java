@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConexaoBanco {
     private static final String URL = "jdbc:mysql://localhost/SISTEMA_HOSPITALAR";
     private static final String USUARIO = "root";
-    private static final String SENHA = "";       
+    private static final String SENHA = "";       oi eu sou goku
     
     public static Connection getConnection() {
         
